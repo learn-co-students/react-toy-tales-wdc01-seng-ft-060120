@@ -11,7 +11,8 @@ import data from './data'
 class App extends React.Component{
 
   state = {
-    display: false
+    display: false,
+    toyData: data
   }
 
   handleClick = () => {
@@ -34,7 +35,7 @@ class App extends React.Component{
         <div className="buttonContainer">
           <button onClick={this.handleClick}> Add a Toy </button>
         </div>
-        <ToyContainer/>
+        <ToyContainer toyData={this.state.toyData}/>
       </>
     );
   }
